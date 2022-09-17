@@ -47,10 +47,11 @@ services:
     ports:
       - 7575:7575
   noisy:
+    depends_on:
+        - pulse
     # https://hub.docker.com/_/nginx
-    image: nginx-alpine
+    build: ./noisy
     restart: always
-    volumes:
-      - ./noisy:/usr/share/nginx/html
     ports:
-      - 8080:80
+      - 80:80
+      - 8585:8585
