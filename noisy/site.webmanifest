@@ -1,0 +1,12 @@
+{
+  "short_name": "Noisy?",
+  "name": "How Much Noise?",
+  "icons": [{
+    "src": "apple-touch-icon.png",
+    "type": "image/png",
+    "sizes": "158x158"
+  }],
+  "start_url": "/",
+  "background_color": "#141421",
+  "theme_color": "#141421"
+}

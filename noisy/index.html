@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>How Much Noise?</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#141421">
+<link rel="manifest" href="site.webmanifest">
+<!--
+
+Site hand-coded by Mountain/\Ash
+Mar 2019 (modded for demo as a RaspberryPi sound sensor)
+humans.txt supported
+
+-->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg height="40" width="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-rule="nonzero" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M64 32C64 49.673 49.673 64 32 64C14.327 64 0 49.673 0 32C0 14.327 14.327 0 32 0C49.673 0 64 14.327 64 32ZM32 47C36.4183 47 40 43.4183 40 39L24 39C24 43.4183 27.5817 47 32 47ZM32 34C36.4183 34 40 30.4183 40 26C40 21.5817 36.4183 18 32 18C27.5817 18 24 21.5817 24 26C24 30.4183 27.5817 34 32 34Z" fill="#FFF" fill-rule="evenodd" opacity="1" stroke="none"/></svg>
+
+<div id="page">
+
+	<header>
+
+		<picture>
+			<source srcset="img/photo-stop.avif" type="image/avif">
+			<source srcset="img/photo-stop.webp" type="image/webp">
+			<img src="img/photo-stop.webp" alt="Profile Photo" width="450" height="450">
+		</picture>
+		<h1 id="decibels">00</h1>
+		<p>Amount of Sound</p>
+
+	</header>
+
+</div><!-- #page -->
+
+<canvas id="canvas"></canvas>
+
+<script>
+const interval = 200;
+var decibels = 0;
+
+window.setInterval(() => {
+	const $_decibels = document.getElementById('decibels');
+	decibels = Math.round( Math.random() * 100 );
+
+	$_decibels.innerText = decibels.toString();
+}, interval);
+
+// Poor mans "hot" reload
+// window.setInterval(() => {
+// 	location.reload();
+// }, interval * 100);
+</script>
+
+<script src="js/chroma_1.3.4.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

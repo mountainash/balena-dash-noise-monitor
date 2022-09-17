@@ -1,0 +1,23 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Mountain/\Ash -- Copywriter/Designer/Coder/DevOps
+	Laura Birrell -- Photographer
+
+# THANKS
+
+	IDE: & Visual Studio Code
+	VCS: GitLab
+	Fonts: Google Fonts, Fontello
+	Background: Fabio Ottaviani https://codepen.io/supah/
+	Image Compression: https://squoosh.app/
+
+# TECHNOLOGY COLOPHON
+
+	LESS, CSS3, HTML5, TEXT, XML, JPEG, PNG, SVG
+
+# FONTS
+
+	https://fonts.google.com/specimen/Rubik?selection.family=Rubik
