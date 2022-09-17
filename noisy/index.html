@@ -36,14 +36,27 @@ humans.txt supported
 
 <script>
 const interval = 200;
+const $_decibels = document.getElementById('decibels');
 var decibels = 0;
 
-window.setInterval(() => {
-	const $_decibels = document.getElementById('decibels');
-	decibels = Math.round( Math.random() * 100 );
+// window.setInterval(() => {
+// 	decibels = Math.round( Math.random() * 100 );
 
-	$_decibels.innerText = decibels.toString();
-}, interval);
+// 	$_decibels.innerText = decibels.toString();
+// }, interval);
+
+function reader() {
+	fetch('/api')
+		.then((response) => response.json())
+		.then((data) => console.log(data))
+		.then((data) => {
+			decibels = Math.round( data.pulse_per_second );
+			$_decibels.innerText = decibels.toString();
+		});
+
+	requestAnimationFrame(reader);
+}
+reader();
 
 // Poor mans "hot" reload
 // window.setInterval(() => {
