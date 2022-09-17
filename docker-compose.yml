@@ -5,6 +5,8 @@ volumes:
 
 services:
   kiosk:
+    depends_on:
+        - noisy
     restart: always
     build: ./kiosk
     privileged: true
@@ -43,6 +45,7 @@ services:
       io.balena.features.supervisor-api: '1'
     environment:
       GPIO_PIN: 4
+      PULL_UP_DOWN: up
       ALWAYS_USE_HTTPSERVER: True
     ports:
       - 7575:7575
