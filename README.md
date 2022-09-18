@@ -14,11 +14,15 @@ Using a Raspberry Pi, a microphone sensor, and a connected monitor, this project
 1. Deploy/flash the project to your RaspberryPi
 1. Boot and watch your display monitor for the local webserver, then make some noise
 
+**NOTE:** BOARD numbering system is used for GPIO pin numbering. See [this](https://pinout.xyz/) for more information. So if you plug the microphone analogue output into the 2nd "inner" pin closest to your RaspberryPi 3 Ethernet ports then you would set `GPIO_PIN` to `37` in _balenaCloud_.
+
 ## Deploy Changes
 1. `git remote add balena mountainash@git.balena-cloud.com:mountainash/hobby.git`
 1. `git clone mountainash@git.balena-cloud.com:mountainash/hobby.git`
 1. `cd hobby`
 1. `git push balena master`
+
+Originally forked from balenaDash (original README below), but added local nginx webserver (along with custom visualisation) and Pulse block for GPIO pin monitoring.
 
 ---
 
