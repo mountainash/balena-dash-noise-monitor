@@ -44,7 +44,7 @@ services:
     labels:
       io.balena.features.supervisor-api: '1'
     environment:
-      # GPIO_PIN: 4 # add to balenaCloud Device Variables
+      # GPIO_PIN: 11 # add to balenaCloud Device Variables
       # PULL_UP_DOWN: down # add to balenaCloud Device Variables
       ALWAYS_USE_HTTPSERVER: 1
     expose:

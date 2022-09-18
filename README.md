@@ -10,7 +10,7 @@ Using a Raspberry Pi, a microphone sensor, and a connected monitor, this project
 ## Setup
 1. [How to wire-up the KY-038 module](https://youtu.be/CbovaHqvdsM?t=325) (rewind a bit to see how to calibrate the microphone pick-up sensitivity), remember the pin number you use for the `AO` pin
 1. set `GPIO_PIN` as a number variable in [balenaCloud](https://dashboard.balena-cloud.com/) depending on the previous step
-1. In _balenaCloud_, change variable `LAUNCH_URL` to `http://localhost/index.html` to display the local webserver on the HDMI port of the RaspberryPi
+1. In _balenaCloud_, change variable `LAUNCH_URL` to `http://localhost/` to display the local webserver on the HDMI port of the RaspberryPi
 1. Deploy/flash the project to your RaspberryPi
 1. Boot and watch your display monitor for the local webserver, then make some noise
 

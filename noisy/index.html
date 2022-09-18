@@ -69,11 +69,11 @@ var decibels = 0;
 function reader() {
 	fetch('/api')
 		.then((response) => response.json())
-		.then((data) => console.log(data))
 		.then((data) => {
 			decibels = Math.round( data.pulse_per_second );
 			$_decibels.innerText = decibels.toString();
-		});
+			console.log(data);
+		})
 
 	requestAnimationFrame(reader);
 }
