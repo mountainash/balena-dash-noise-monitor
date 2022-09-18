@@ -1,6 +1,8 @@
 # Noise Monitor
 > A simple noise monitor visualisation for the Raspberry Pi
 
+![Sample of Visualisation](./assets/sample.jpg)
+
 Using a Raspberry Pi, a microphone sensor, and a connected monitor, this project will display the noise level as an interesting full screen motion wallpaper. You can connect the Pi to a TV or monitor and leave it running as a visualisation, or connect a 3rd party computer's web browser to the Pi's webserver and display the same noise level visualisation.
 
 ## Modified:
