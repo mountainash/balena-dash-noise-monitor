@@ -1,7 +1,17 @@
 ## Modified:
 - added [Pulse](https://github.com/balenablocks/pulse) for GPIO pin monitoring local sever
+- See `./noisy/` for local webserver (visualizer) for GPIO pin monitoring. See the comments in `index.html` for more options
 
-![balenaDash](https://raw.githubusercontent.com/balenalabs/balena-dash/master/assets/balenaDash_logo.png)
+
+## Setup
+1. [How to wire-up the KY-038 module](https://youtu.be/CbovaHqvdsM?t=325) (rewind a bit to see how to calibrate the microphone pick-up sensitivity), remember the pin number you use for the `AO` pin
+1. set `GPIO_PIN` as a number variable in [balenaCloud](https://dashboard.balena-cloud.com/) depending on the previous step
+1. set `PULL_UP_DOWN` as a variable in _balenaCloud_ to `DOWN` or `UP` depending on your setup
+1. In _balenaCloud_, change variable `LAUNCH_URL` to `http://localhost/index.html` to display the local webserver on the HDMI port of the RaspberryPi
+1. Deploy/flash the project to your RaspberryPi
+1. Boot and watch your display monitor for the local webserver, then make some noise
+
+![balenaDash](./assets/balenaDash_logo.png)
 
 Try our simple [balenaCloud](https://www.balena.io/cloud) starter project to set up a Raspberry Pi and LCD or monitor to display any webpage or web-based dashboard. We’re calling it balenaDash! Follow along with our guide to get up and running in under 30 minutes.
 
@@ -46,7 +56,7 @@ The list of items you’ll need is also included below:
 - Power supply
 - Case (optional)
 
-![](https://raw.githubusercontent.com/balenalabs/balena-dash/master/assets/hardware.jpg)
+![](./assets/hardware.jpg)
 
 ## Setup and configuration
 

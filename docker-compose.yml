@@ -44,15 +44,14 @@ services:
     labels:
       io.balena.features.supervisor-api: '1'
     environment:
-      GPIO_PIN: 4
-      PULL_UP_DOWN: up
+      # GPIO_PIN: 4 # add to balenaCloud Device Variables
+      # PULL_UP_DOWN: down # add to balenaCloud Device Variables
       ALWAYS_USE_HTTPSERVER: True
-    ports:
-      - 7575:7575
+    expose:
+      - 7575
   noisy:
     depends_on:
         - pulse
-    # https://hub.docker.com/_/nginx
     build: ./noisy
     restart: always
     ports:

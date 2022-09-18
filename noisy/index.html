@@ -39,11 +39,32 @@ const interval = 200;
 const $_decibels = document.getElementById('decibels');
 var decibels = 0;
 
+/* Randomly generate decibels */
 // window.setInterval(() => {
 // 	decibels = Math.round( Math.random() * 100 );
 
 // 	$_decibels.innerText = decibels.toString();
 // }, interval);
+
+/* Get decibels from microphone (accessible to browser) */
+// const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+// const audioContext = new AudioContext();
+// const mediaStreamAudioSourceNode = audioContext.createMediaStreamSource(stream);
+// const analyserNode = audioContext.createAnalyser();
+// mediaStreamAudioSourceNode.connect(analyserNode);
+
+// const pcmData = new Float32Array(analyserNode.fftSize);
+
+// const onFrame = () => {
+//     analyserNode.getFloatTimeDomainData(pcmData);
+//     let sumSquares = 0.0;
+//     for (const amplitude of pcmData) {
+// 		sumSquares += amplitude * amplitude;
+// 	}
+//     decibels = Math.sqrt(sumSquares / pcmData.length);
+//     window.requestAnimationFrame(onFrame);
+// };
+// window.requestAnimationFrame(onFrame);
 
 function reader() {
 	fetch('/api')
@@ -58,7 +79,7 @@ function reader() {
 }
 reader();
 
-// Poor mans "hot" reload
+/* Poor mans "hot" reload */
 // window.setInterval(() => {
 // 	location.reload();
 // }, interval * 100);
