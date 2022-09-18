@@ -46,7 +46,7 @@ services:
     environment:
       # GPIO_PIN: 4 # add to balenaCloud Device Variables
       # PULL_UP_DOWN: down # add to balenaCloud Device Variables
-      ALWAYS_USE_HTTPSERVER: True
+      ALWAYS_USE_HTTPSERVER: 1
     expose:
       - 7575
   noisy:

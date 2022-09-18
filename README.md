@@ -1,15 +1,26 @@
+# Noise Monitor
+> A simple noise monitor visualisation for the Raspberry Pi
+
+Using a Raspberry Pi, a microphone sensor, and a connected monitor, this project will display the noise level as an interesting full screen motion wallpaper. You can connect the Pi to a TV or monitor and leave it running as a visualisation, or connect a 3rd party computer's web browser to the Pi's webserver and display the same noise level visualisation.
+
 ## Modified:
 - added [Pulse](https://github.com/balenablocks/pulse) for GPIO pin monitoring local sever
 - See `./noisy/` for local webserver (visualizer) for GPIO pin monitoring. See the comments in `index.html` for more options
 
-
 ## Setup
 1. [How to wire-up the KY-038 module](https://youtu.be/CbovaHqvdsM?t=325) (rewind a bit to see how to calibrate the microphone pick-up sensitivity), remember the pin number you use for the `AO` pin
 1. set `GPIO_PIN` as a number variable in [balenaCloud](https://dashboard.balena-cloud.com/) depending on the previous step
-1. set `PULL_UP_DOWN` as a variable in _balenaCloud_ to `DOWN` or `UP` depending on your setup
 1. In _balenaCloud_, change variable `LAUNCH_URL` to `http://localhost/index.html` to display the local webserver on the HDMI port of the RaspberryPi
 1. Deploy/flash the project to your RaspberryPi
 1. Boot and watch your display monitor for the local webserver, then make some noise
+
+## Deploy Changes
+1. `git remote add balena mountainash@git.balena-cloud.com:mountainash/hobby.git`
+1. `git clone mountainash@git.balena-cloud.com:mountainash/hobby.git`
+1. `cd hobby`
+1. `git push balena master`
+
+---
 
 ![balenaDash](./assets/balenaDash_logo.png)
 
